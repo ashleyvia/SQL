@@ -1,0 +1,27 @@
+--Creating a store database
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, clothing_type TEXT, clothing_name TEXT, cost INTEGER, number_sold INTEGER);
+
+INSERT INTO clothing VALUES (1, "tops", "blue shirt", 3.98, 5);
+INSERT INTO clothing VALUES (2, "tops", "red shirt", 3.98, 6);
+INSERT INTO clothing VALUES (3, "tops", "yellow shirt", 3.98, 7);
+INSERT INTO clothing VALUES (4, "tops", "orange shirt", 3.98, 4);
+INSERT INTO clothing VALUES (5, "tops", "purple shirt", 3.98, 9);
+INSERT INTO clothing VALUES (6, "bottoms", "blue shorts", 5.68, 26);
+INSERT INTO clothing VALUES (7, "bottoms", "red shorts", 5.68, 32);
+INSERT INTO clothing VALUES (8, "bottoms", "yellow shorts", 5.68, 3);
+INSERT INTO clothing VALUES (9, "bottoms", "orange shorts", 5.68, 43);
+INSERT INTO clothing VALUES (10, "bottoms", "purple shorts", 5.68, 5);
+INSERT INTO clothing VALUES (11, "hats", "blue hat", 4.99, 27);
+INSERT INTO clothing VALUES (12, "hats", "red hat", 4.99, 23);
+INSERT INTO clothing VALUES (13, "hats", "yellow hat", 4.99, 36);
+INSERT INTO clothing VALUES (14, "hats", "orange hat", 4.99, 12);
+INSERT INTO clothing VALUES (15, "hats", "purple hat", 4.99, 15);
+
+-- Ordering the items by the price of each item
+SELECT * FROM clothing
+ORDER BY cost;
+
+--Acquiring the number of items sold from this store total
+SELECT SUM(number_sold) FROM clothing;
+
+
